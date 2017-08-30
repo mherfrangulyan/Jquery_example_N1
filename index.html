@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>JQuery example (Negative Numbers)</title>
+</head>
+<body>
+<input class="anyclass" value="">
+<input class="otherclass" value="">
+<div id="append_ID"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+<script type = "text/javascript">
+$('input').on('change',function(){
+sum_numbers();  
+});
+function sum_numbers(){
+var a = $('.anyclass').val();
+var b = $('.otherclass').val();
+if(a.substring(1) === "-"){
+ a= parseInt(a) * -1;
+}else{
+ a= parseInt(a);
+}
+if(b.substring(1) === "-"){
+ b= parseInt(b) * -1;
+}else{
+ b= parseInt(b);
+}
+$('#append_ID').html(a+b);
+}
+</script>
+</body>
+</html>
